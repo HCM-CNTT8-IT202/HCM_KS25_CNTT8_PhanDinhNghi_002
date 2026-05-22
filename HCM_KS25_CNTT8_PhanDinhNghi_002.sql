@@ -140,4 +140,12 @@ GROUP BY c.Customer_id, c.full_name
 HAVING SUM(cl.Claim_amount) > 50000000;
 
 
+-- PHAN 4
+-- CAU 1
+CREATE INDEX idx_policy_status_date
+ON Policies (
+    Status,
+    Start_date
+);
+
 
